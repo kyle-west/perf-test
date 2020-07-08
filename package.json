@@ -1,0 +1,24 @@
+{
+  "name": "perf-tester",
+  "version": "0.1.0",
+  "description": "Test out performance page loads in Chrome and Firefox",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kyle-west/perf-tester.git"
+  },
+  "keywords": [
+    "test",
+    "performace",
+    "puppeteer"
+  ],
+  "author": "kyle-west",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kyle-west/perf-tester/issues"
+  },
+  "homepage": "https://github.com/kyle-west/perf-tester#readme"
+}
