@@ -20,5 +20,9 @@
   "bugs": {
     "url": "https://github.com/kyle-west/perf-tester/issues"
   },
-  "homepage": "https://github.com/kyle-west/perf-tester#readme"
+  "homepage": "https://github.com/kyle-west/perf-tester#readme",
+  "dependencies": {
+    "puppeteer": "^5.0.0",
+    "puppeteer-firefox": "^0.5.1"
+  }
 }
