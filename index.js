@@ -1,19 +1,17 @@
 #!/usr/bin/env node
-
-const puppeteer = require('puppeteer');
-const puppeteerFF = require('puppeteer-firefox');
+const { chromium, firefox, webkit } = require('playwright');
 
 const test = require('./lib/tester');
 
-const trial = async (engine, name, url, numTests) => {
+const trial = async (engine, displayName, url, numTests) => {
   const { timings, total } = await test(
     url,
     engine,
     numTests
   )
-  console.log(`Time Trials for ${name} Browser`)
+  console.log(`Time Trials for ${displayName} Browser`)
   console.table(timings)
-  console.log('Averages')
+  console.log(`${displayName} Averages`)
   console.table(total)
 }
 
@@ -28,8 +26,11 @@ if (!url) {
   numTrials = numTrials ? parseInt(numTrials, 10) : 3;
 
   (async () => {
-    await trial(puppeteer, 'Chromium', url, numTrials)
+    console.log(`Time Trials against ${url} on ${new Date().toDateString()}\n\n`)
+    await trial(chromium, 'Chromium', url, numTrials)
     console.log('\n')
-    await trial(puppeteerFF, 'FireFox', url, numTrials)
+    await trial(firefox, 'Firefox', url, numTrials)
+    console.log('\n')
+    await trial(webkit, 'WebKit', url, numTrials)
   })();
 }

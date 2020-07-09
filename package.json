@@ -1,7 +1,7 @@
 {
-  "name": "perf-tester",
+  "name": "perf-test",
   "version": "0.1.0",
-  "description": "Test out performance page loads in Chrome and Firefox",
+  "description": "CLI to test performance page load trials on Chromium, Firefox, and WebKit.",
   "main": "index.js",
   "bin": {
     "perf": "index.js"
@@ -11,21 +11,21 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kyle-west/perf-tester.git"
+    "url": "git+https://github.com/kyle-west/perf-test.git"
   },
   "keywords": [
     "test",
-    "performace",
+    "performance",
     "puppeteer"
   ],
   "author": "kyle-west",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/kyle-west/perf-tester/issues"
+    "url": "https://github.com/kyle-west/perf-test/issues"
   },
-  "homepage": "https://github.com/kyle-west/perf-tester#readme",
-  "dependencies": {
-    "puppeteer": "^5.0.0",
-    "puppeteer-firefox": "^0.5.1"
+  "homepage": "https://github.com/kyle-west/perf-test#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "playwright": "^1.2.0"
   }
 }
