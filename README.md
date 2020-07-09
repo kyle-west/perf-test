@@ -11,7 +11,7 @@ _Note: This package is still in pre-release and subject to possible change._
 Install globally using NPM.
 
 ```sh
-npm install -g perf-test
+npm install -g @kyle-west/perf-test
 ```
 
 ## Usage

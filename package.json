@@ -1,6 +1,6 @@
 {
-  "name": "perf-test",
-  "version": "0.1.0",
+  "name": "@kyle-west/perf-test",
+  "version": "0.1.1",
   "description": "CLI to test performance page load trials on Chromium, Firefox, and WebKit.",
   "main": "index.js",
   "bin": {
@@ -24,8 +24,7 @@
     "url": "https://github.com/kyle-west/perf-test/issues"
   },
   "homepage": "https://github.com/kyle-west/perf-test#readme",
-  "dependencies": {},
-  "devDependencies": {
+  "dependencies": {
     "playwright": "^1.2.0"
   }
 }
