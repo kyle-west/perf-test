@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const puppeteer = require('puppeteer');
 const puppeteerFF = require('puppeteer-firefox');
 

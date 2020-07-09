@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "description": "Test out performance page loads in Chrome and Firefox",
   "main": "index.js",
+  "bin": {
+    "perf": "index.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
