@@ -1,6 +1,6 @@
 {
   "name": "@kyle-west/perf-test",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "CLI to test performance page load trials on Chromium, Firefox, and WebKit.",
   "main": "index.js",
   "bin": {
@@ -25,6 +25,8 @@
   },
   "homepage": "https://github.com/kyle-west/perf-test#readme",
   "dependencies": {
-    "playwright": "^1.2.0"
+    "@ffmpeg-installer/ffmpeg": "^1.0.20",
+    "playwright": "^1.2.0",
+    "playwright-video": "^2.4.0"
   }
 }

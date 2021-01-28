@@ -86,3 +86,28 @@ WebKit Averages
 │       loadEventEnd       │        831        │
 └──────────────────────────┴───────────────────┘
 ```
+
+### Run a script
+
+```sh
+perf --script <filename> [--engine <chromium|firefox|webkit>]
+```
+
+Scripts must be modules of the form:
+
+```js
+module.exports = async () => {
+  // page, browser, engine, engineName, context available globally
+  await page.goto("https://google.com")
+}
+```
+
+### Record Video
+
+Include the `--record-video` in the arguments list to save a local file. _Note this feature only works in script mode for Chromium browsers_
+
+```sh
+perf --script <filename> --record-video <video-name>
+```
+
+File will be saved to `<video-name>.mp4`

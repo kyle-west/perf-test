@@ -2,6 +2,7 @@
 const { chromium, firefox, webkit } = require('playwright');
 
 const test = require('./lib/tester');
+const runScript = require('./lib/run-script');
 
 const trial = async (engine, displayName, url, numTests) => {
   const { timings, total } = await test(
@@ -15,10 +16,13 @@ const trial = async (engine, displayName, url, numTests) => {
   console.table(total)
 }
 
-let [ _, __, url, numTrials ] = process.argv;
+let [ _, __, url, numTrials, ...options ] = process.argv;
 
 if (!url) {
   console.error(new Error('No URL specified for page load test'))
+} else if (url === '--script') {
+  const filename = numTrials
+  runScript(filename, options)
 } else {
   if (!numTrials) {
     console.warn('No number of trials specified, defaulting to 3')
